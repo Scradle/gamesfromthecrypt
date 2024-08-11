@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html {{ html_class }}>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.name }}</title>
+</head>
+<body {{ body_class }}>
+    {# Inclure le header #}
+    {% include 'partials/header.twig' %}
+    
+    <main>
+        {{ block('content') }}
+    </main>
+    
+    {# Inclure le footer #}
+    {% include 'partials/footer.twig' %}
+    
+</body>
+</html>

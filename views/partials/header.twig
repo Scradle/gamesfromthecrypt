@@ -1,0 +1,11 @@
+<header>
+    <h1>{{ site.name }}</h1>
+    <nav>
+        <ul>
+            {# Afficher le menu principal #}
+            {% for item in menu.items %}
+                <li><a href="{{ item.link }}">{{ item.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>
