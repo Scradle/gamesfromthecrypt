@@ -1,6 +1,13 @@
 {% extends 'layouts/base.twig' %}
 
 {% block content %}
-    <h1>Bienvenue sur la page d'accueil</h1>
-    <p>Ceci est le contenu de la page d'accueil.</p>
+
+    <div id="sticky-image-1" class="sticky">
+        <img src="{{ head }}" alt="background du site">
+    </div>
+
+    <div id="sticky-image-2" class="sticky">
+        <img src="{{ cab }}" alt="background du site">
+    </div>
+
 {% endblock %}

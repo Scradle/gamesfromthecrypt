@@ -1,11 +1,8 @@
 <header>
-    <h1>{{ site.name }}</h1>
+    <div class="header-logo">
+        <img src="{{ logo }}" alt="Logo du site">
+    </div>
     <nav>
-        <ul>
-            {# Afficher le menu principal #}
-            {% for item in menu.items %}
-                <li><a href="{{ item.link }}">{{ item.title }}</a></li>
-            {% endfor %}
-        </ul>
+        <img src="{{ menu }}" alt="Menu du site">
     </nav>
 </header>

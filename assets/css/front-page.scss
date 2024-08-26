@@ -1,0 +1,33 @@
+  
+#sticky-image-1,
+#sticky-image-2 {
+    position: sticky;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 50vh;
+}
+
+#sticky-image-1 {
+    top: 15%; /* Centré au milieu de l'écran en Y */
+    z-index: 10;
+    transition: top 0.5s ease; /* Pour les transitions si nécessaire */
+
+    img {
+        width: 80vw;
+        max-width: 600px;
+    }
+}
+
+#sticky-image-2 {
+    bottom: 20%; /* Position initiale hors de l'écran vers le bas */
+    z-index: 9;
+    transition: top 0.5s ease; /* Pour les transitions si nécessaire */
+
+    img {
+        width: 80vw;
+        max-width: 620px;
+    }
+}
+  

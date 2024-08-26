@@ -1,0 +1,151 @@
+/*animations********************************************************************************************/
+
+@keyframes move {
+    0% {
+      transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-15px);
+    }
+    50% {
+        transform: translateX(0px);
+    }
+    50% {
+      transform: translateX(15px);
+    }
+    100% {
+      transform: translateX(0px);
+    }
+}
+
+/*fonts********************************************************************************************/
+
+
+/*body********************************************************************************************/
+
+body {
+    margin: 0;
+    height: 200vh; /* Pour simuler un contenu plus long */
+    font-family: Arial, sans-serif;
+
+    background-color: black;
+}
+
+/*header********************************************************************************************/
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 3000;
+    display: flex;
+    justify-content: space-between;
+    .header-logo {
+        img {
+            max-width: 400px;
+            width: 50dvw;
+        }
+    }
+    nav {
+        img {
+            max-width: 300px;
+            width: 30dvw;
+        }
+    }
+}
+
+/*background********************************************************************************************/
+
+.background {
+    display: flex;
+    position: relative;
+    /* Background containers */
+    #left-background, #right-background {
+        width: 50%;
+        top: 0;
+        z-index: -1;
+    }
+    #left-background {
+        left: 0;
+        /* Specific styles for each image */
+        .background-image-left-1 {
+            z-index: 1;
+            background-image: url('../images/backgroundL.webp');
+        }
+
+        .background-image-left-2 {
+            z-index: 3;
+            background-image: url('../images/backgroundL2.webp');
+        }
+    }
+    #right-background {
+        right: 0;
+        .background-image-right-1 {
+            z-index: 1;
+            background-image: url('../images/backgroundR.webp');
+        }
+
+        .background-image-right-2 {
+            z-index: 3;
+            background-image: url('../images/backgroundR2.webp');
+        }
+    }
+    /* Base styles for background images */
+    .background-image {
+        position: absolute;
+        width: 50dvw; 
+        height: 100dvh;
+        background-repeat: repeat-y; /* Repeat vertically */
+        background-size: cover; /* Adjust the size to cover the container */
+        background-position: center;
+        will-change: transform; /* Optimisation pour la transformation */
+    }
+    #animated-line {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 100vh;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        span {
+            width: 10dvw;
+            height: 10dvh;
+            background-color: black;
+            animation: move 1.5s ease-in-out infinite;
+        }
+        span:nth-child(1) {
+            animation-delay: 0s;
+        }
+        span:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+        span:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+        span:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+        span:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+        span:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+        span:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+        span:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+        span:nth-child(9) {
+            animation-delay: 0.8s;
+        }
+        span:nth-child(10) {
+            animation-delay: 0.9s;
+        }
+    }
+}

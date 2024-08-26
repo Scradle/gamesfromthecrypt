@@ -1,0 +1,1 @@
+#sticky-image-1,#sticky-image-2{position:sticky;display:flex;justify-content:center;align-items:center;width:100vw;height:50vh}#sticky-image-1{top:15%;z-index:10;transition:top .5s ease}#sticky-image-1 img{width:80vw;max-width:600px}#sticky-image-2{bottom:20%;z-index:9;transition:top .5s ease}#sticky-image-2 img{width:80vw;max-width:620px}

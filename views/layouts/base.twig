@@ -1,19 +1,47 @@
 <!DOCTYPE html>
-<html {{ html_class }}>
-<head>
-    <meta charset="UTF-8">
-    <title>{{ site.name }}</title>
-</head>
-<body {{ body_class }}>
-    {# Inclure le header #}
-    {% include 'partials/header.twig' %}
-    
-    <main>
-        {{ block('content') }}
-    </main>
-    
-    {# Inclure le footer #}
-    {% include 'partials/footer.twig' %}
-    
-</body>
+    <html {{ html_class }}>
+    <head>
+        <meta charset="UTF-8">
+        <title>{{ site.name }}</title>
+        {{ function('wp_head') }}
+    </head>
+    <body {{ body_class }}>
+        {# Inclure le header #}
+        {% include 'partials/header.twig' %}
+        
+        <main>
+
+            <div class="background">
+                <!-- Left background with two overlapping images -->
+                <div id="left-background">
+                    <div class="background-image background-image-left-1">
+                    </div>
+                    <div class="background-image background-image-left-2">
+                    </div>
+                </div>
+                
+                <!-- Right background with two overlapping images -->
+                <div id="right-background">
+                    <div class="background-image background-image-right-1">
+                    </div>
+                    <div class="background-image background-image-right-2">
+                    </div>
+                </div>
+
+                <!-- Central animated line -->
+                <div id="animated-line">
+                    {% for _ in range(1, 10) %}
+                        <span></span>
+                    {% endfor %}
+                </div>
+            </div>
+
+            {{ block('content') }}
+
+        </main>
+        
+        {# Inclure le footer #}
+        {% include 'partials/footer.twig' %}
+        
+    </body>
 </html>
